@@ -86,9 +86,9 @@ const STORY_PAGES: StoryPage[] = [
 ];
 
 // Timing constants so typewriter speed & page transition match accurately
-const ENTER_DELAY_MS = 650; // Wait for vertical scroll entrance to settle
-const CHAR_SPEED_MS = 45; // Typing speed per character
-const HOLD_AFTER_TYPING_MS = 1800; // Brief reading pause after last character before scrolling
+const ENTER_DELAY_MS = 750; // Wait for vertical scroll entrance to settle
+const CHAR_SPEED_MS = 85; // Balanced, relaxed typing speed per character
+const HOLD_AFTER_TYPING_MS = 2900; // Comfortable reading pause after last character before scrolling
 
 function getPageTiming(text: string) {
   const typingDurationMs = text.length * CHAR_SPEED_MS;
@@ -621,13 +621,6 @@ export function App() {
                   >
                     Ulangi
                   </button>
-                  <p
-                    className={`text-[10px] uppercase tracking-[0.22em] ${
-                      isLight ? "text-black/40" : "text-white/40"
-                    }`}
-                  >
-                    Akhir halaman • Klik ulangi untuk kembali ke bagian pertama
-                  </p>
                 </motion.div>
               ) : (
                 <>
